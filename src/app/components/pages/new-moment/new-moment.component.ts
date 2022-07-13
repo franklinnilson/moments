@@ -36,7 +36,9 @@ export class NewMomentComponent implements OnInit {
 
     this.messageService.add('Momento criado com sucesso!');
 
-    this.router.navigate(['/']);
+    this.router.navigate(['/']).then(() => {
+      window.location.reload();
+    });
   }
 
 }
